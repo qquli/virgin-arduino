@@ -1,0 +1,373 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Q_NPN_BCE Q1
+U 1 1 5F9B2681
+P 4075 2725
+F 0 "Q1" H 4266 2771 50  0000 L CNN
+F 1 "Q_NPN" H 4266 2680 50  0000 L CNN
+F 2 "" H 4275 2825 50  0001 C CNN
+F 3 "UTC 2SC1384" H 4075 2725 50  0001 C CNN
+	1    4075 2725
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4275 2725 4625 2725
+$Comp
+L Device:R R2
+U 1 1 5F9B38BB
+P 3975 2275
+F 0 "R2" H 3905 2229 50  0000 R CNN
+F 1 "390K" H 3905 2320 50  0000 R CNN
+F 2 "" V 3905 2275 50  0001 C CNN
+F 3 "~" H 3975 2275 50  0001 C CNN
+	1    3975 2275
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5F9B3DF8
+P 4525 2975
+F 0 "R3" H 4670 2950 50  0000 R CNN
+F 1 "1" H 4635 3020 50  0000 R CNN
+F 2 "" V 4455 2975 50  0001 C CNN
+F 3 "~" H 4525 2975 50  0001 C CNN
+	1    4525 2975
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5F9B4141
+P 4725 2975
+F 0 "R4" H 4675 2925 50  0000 R CNN
+F 1 "1" H 4655 3020 50  0000 R CNN
+F 2 "" V 4655 2975 50  0001 C CNN
+F 3 "~" H 4725 2975 50  0001 C CNN
+	1    4725 2975
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4525 3125 4625 3125
+Wire Wire Line
+	3975 2925 3975 3275
+Wire Wire Line
+	4625 3275 4625 3125
+Wire Wire Line
+	3975 3275 4325 3275
+Connection ~ 4625 3125
+Wire Wire Line
+	4625 3125 4725 3125
+Wire Wire Line
+	3975 2125 3975 2025
+Wire Wire Line
+	3975 2025 4275 2025
+Wire Wire Line
+	4275 2025 4275 1925
+Connection ~ 4275 2025
+$Comp
+L Device:Q_NMOS_DGS Q2
+U 1 1 5F9B97E1
+P 4225 3575
+F 0 "Q2" H 4429 3621 50  0000 L CNN
+F 1 "Q_NMOS" H 4429 3530 50  0000 L CNN
+F 2 "" H 4425 3675 50  0001 C CNN
+F 3 "FQP30N06L" H 4225 3575 50  0001 C CNN
+	1    4225 3575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4325 3375 4325 3275
+Connection ~ 4325 3275
+Wire Wire Line
+	4325 3275 4625 3275
+Text GLabel 3625 3575 0    50   Input ~ 0
+PWM_SIGNAL_IN
+$Comp
+L Device:R R1
+U 1 1 5F9BAFD9
+P 3775 3575
+F 0 "R1" V 3982 3575 50  0000 C CNN
+F 1 "100" V 3891 3575 50  0000 C CNN
+F 2 "" V 3705 3575 50  0001 C CNN
+F 3 "~" H 3775 3575 50  0001 C CNN
+	1    3775 3575
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3925 3575 3975 3575
+$Comp
+L Device:R PULL_DOWN1
+U 1 1 5F9BC1A5
+P 3975 3775
+F 0 "PULL_DOWN1" H 3425 3725 50  0000 L CNN
+F 1 "10K" H 3775 3805 50  0000 L CNN
+F 2 "" V 3905 3775 50  0001 C CNN
+F 3 "~" H 3975 3775 50  0001 C CNN
+	1    3975 3775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4325 3925 4325 3775
+Wire Wire Line
+	3975 3625 3975 3575
+Connection ~ 3975 3575
+Wire Wire Line
+	3975 3575 4025 3575
+Wire Wire Line
+	4625 2225 4725 2225
+Wire Wire Line
+	4275 2025 4725 2025
+Text GLabel 4725 2025 2    50   Input ~ 0
+LED_IN
+Text GLabel 4725 2225 2    50   Input ~ 0
+LED_OUT
+$Comp
+L power:+15V #PWR01
+U 1 1 5F9BE0AC
+P 4275 1925
+F 0 "#PWR01" H 4275 1775 50  0001 C CNN
+F 1 "+15V" H 4290 2098 50  0000 C CNN
+F 2 "" H 4275 1925 50  0001 C CNN
+F 3 "" H 4275 1925 50  0001 C CNN
+	1    4275 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5F9BE620
+P 4325 4025
+F 0 "#PWR02" H 4325 3775 50  0001 C CNN
+F 1 "GND" H 4330 3852 50  0000 C CNN
+F 2 "" H 4325 4025 50  0001 C CNN
+F 3 "" H 4325 4025 50  0001 C CNN
+	1    4325 4025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3975 3925 4325 3925
+Wire Wire Line
+	4325 4025 4325 3925
+Connection ~ 4325 3925
+$Comp
+L Device:Q_NMOS_DGS Q3
+U 1 1 5F9C95CB
+P 4525 2475
+F 0 "Q3" H 4729 2521 50  0000 L CNN
+F 1 "Q_NMOS" H 4729 2430 50  0000 L CNN
+F 2 "" H 4725 2575 50  0001 C CNN
+F 3 "FQP30N06L" H 4525 2475 50  0001 C CNN
+	1    4525 2475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4625 2825 4525 2825
+Wire Wire Line
+	4625 2725 4625 2825
+Wire Wire Line
+	4625 2825 4725 2825
+Connection ~ 4625 2825
+Wire Wire Line
+	4625 2675 4625 2725
+Connection ~ 4625 2725
+Wire Wire Line
+	4625 2275 4625 2225
+Wire Wire Line
+	3975 2525 3975 2475
+Wire Wire Line
+	3975 2475 4325 2475
+Connection ~ 3975 2475
+Wire Wire Line
+	3975 2475 3975 2425
+Wire Wire Line
+	5825 2025 5825 2075
+$Comp
+L ESP8266:NodeMCU_1.0_(ESP-12E) U1
+U 1 1 5F9E58E1
+P 7075 3075
+F 0 "U1" H 7075 4162 60  0000 C CNN
+F 1 "NodeMCU_1.0_(ESP-12E)" H 7075 4056 60  0000 C CNN
+F 2 "" H 6475 2225 60  0000 C CNN
+F 3 "" H 7075 2250 60  0000 C CNN
+	1    7075 3075
+	1    0    0    -1  
+$EndComp
+Text GLabel 7875 3375 2    50   Input ~ 0
+PWN_SIGNAL_OUT
+NoConn ~ 6275 2475
+NoConn ~ 6275 2575
+NoConn ~ 6275 2675
+NoConn ~ 6275 2775
+NoConn ~ 6275 2875
+NoConn ~ 6275 2975
+NoConn ~ 6275 3075
+NoConn ~ 6275 3175
+NoConn ~ 6275 3275
+NoConn ~ 6275 3475
+NoConn ~ 6275 3575
+NoConn ~ 7875 3775
+NoConn ~ 7875 3675
+NoConn ~ 7875 3575
+NoConn ~ 7875 3475
+NoConn ~ 7875 3275
+NoConn ~ 7875 3175
+NoConn ~ 7875 3075
+NoConn ~ 7875 2775
+NoConn ~ 7875 2475
+NoConn ~ 7875 2375
+NoConn ~ 7875 2575
+Wire Wire Line
+	7875 2875 7975 2875
+$Comp
+L Device:R_Small 10K
+U 1 1 5F9D32AA
+P 7975 2775
+F 0 "10K" H 8030 2795 50  0000 L CNN
+F 1 "PULL_UP" H 8020 2730 50  0000 L CNN
+F 2 "" H 7975 2775 50  0001 C CNN
+F 3 "~" H 7975 2775 50  0001 C CNN
+	1    7975 2775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7875 2675 7975 2675
+Wire Wire Line
+	7875 2975 8625 2975
+Wire Wire Line
+	7975 2675 8625 2675
+Wire Wire Line
+	8625 2975 9325 2975
+Connection ~ 7975 2675
+Connection ~ 8625 2675
+Connection ~ 8625 2975
+Wire Wire Line
+	9325 2975 9325 2675
+$Comp
+L Device:C C1
+U 1 1 5F9EC55D
+P 8625 2825
+F 0 "C1" H 8725 2825 50  0000 L CNN
+F 1 "0.1uF" H 8730 2745 50  0000 L CNN
+F 2 "" H 8663 2675 50  0001 C CNN
+F 3 "~" H 8625 2825 50  0001 C CNN
+	1    8625 2825
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5F9CE969
+P 8775 2675
+F 0 "R6" V 8610 2620 50  0000 L CNN
+F 1 "1k" V 8675 2625 50  0000 L CNN
+F 2 "" V 8705 2675 50  0001 C CNN
+F 3 "~" H 8775 2675 50  0001 C CNN
+	1    8775 2675
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_MEC_5G BT1
+U 1 1 5F9C948B
+P 9125 2675
+F 0 "BT1" H 9125 2625 50  0000 C CNN
+F 1 "BUTTON" H 9125 2525 50  0000 C CNN
+F 2 "" H 9125 2875 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 9125 2875 50  0001 C CNN
+	1    9125 2675
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5F9F8128
+P 5825 2075
+F 0 "#PWR03" H 5825 1825 50  0001 C CNN
+F 1 "GND" H 5740 2065 50  0000 C CNN
+F 2 "" H 5825 2075 50  0001 C CNN
+F 3 "" H 5825 2075 50  0001 C CNN
+	1    5825 2075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5975 2025 5825 2025
+Wire Wire Line
+	5975 2225 5975 2025
+Wire Wire Line
+	6125 2375 6275 2375
+Wire Wire Line
+	5975 2775 5975 2525
+Wire Wire Line
+	5975 3075 5975 3375
+$Comp
+L Device:R R5
+U 1 1 5F9F48FD
+P 5975 2925
+F 0 "R5" H 5825 2975 50  0000 L CNN
+F 1 "100" H 5775 2875 50  0000 L CNN
+F 2 "" V 5905 2925 50  0001 C CNN
+F 3 "~" H 5975 2925 50  0001 C CNN
+	1    5975 2925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6275 3375 5975 3375
+$Comp
+L Device:R_POT RV1
+U 1 1 5F9F3195
+P 5975 2375
+F 0 "RV1" H 5925 2425 50  0000 R CNN
+F 1 "1k" H 5905 2330 50  0000 R CNN
+F 2 "" H 5975 2375 50  0001 C CNN
+F 3 "~" H 5975 2375 50  0001 C CNN
+	1    5975 2375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6075 3675 6075 3925
+Wire Wire Line
+	6275 3675 6075 3675
+Wire Wire Line
+	6175 3775 6275 3775
+Wire Wire Line
+	6175 3925 6175 3775
+$Comp
+L power:GND #PWR04
+U 1 1 5F9EC955
+P 6075 3925
+F 0 "#PWR04" H 6075 3675 50  0001 C CNN
+F 1 "GND" H 5990 3795 50  0000 C CNN
+F 2 "" H 6075 3925 50  0001 C CNN
+F 3 "" H 6075 3925 50  0001 C CNN
+	1    6075 3925
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR05
+U 1 1 5F9E98C8
+P 6175 3925
+F 0 "#PWR05" H 6175 3775 50  0001 C CNN
+F 1 "+5V" H 6125 4055 50  0000 C CNN
+F 2 "" H 6175 3925 50  0001 C CNN
+F 3 "" H 6175 3925 50  0001 C CNN
+	1    6175 3925
+	-1   0    0    1   
+$EndComp
+Text Notes 8600 2375 0    79   ~ 0
+Przycisk\n      |\n      v
+Text Notes 5550 1875 0    79   ~ 0
+Potencjometr \n      |\n      v
+Text Notes 2625 2700 0    79   ~ 0
+Stabilizacja\nnatężenia ->
+Text Notes 5775 3600 2    79   ~ 0
+<- Obsługa PW 
+$EndSCHEMATC
